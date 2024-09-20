@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import img from '/public/fireworks.png'
 
 export default function MultiStepQuiz() {
   
@@ -148,7 +149,7 @@ export default function MultiStepQuiz() {
           // Display score and celebratory image after quiz is submitted
           <div className="mt-6 text-center">
             <img
-              src="https://clipart-library.com/image_gallery2/Fireworks-Free-PNG-Image.png"
+              src={img}
               alt="Fireworks"
               className="w-48 mx-auto mb-4"
             />
