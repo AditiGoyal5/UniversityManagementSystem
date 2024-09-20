@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { useNavigate , Link } from 'react-router-dom';
-import { FaGoogle } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+
 
 const Login = () => {
   const [fullName, setFullName] = useState('');
@@ -23,13 +23,13 @@ const Login = () => {
       navigate('/'); 
     } catch (error) {
       if (error.response) {
-        // Server responded with a status other than 2xx
+       
         setError(error.response.data.message || 'Invalid credentials');
       } else if (error.request) {
-        // Request was made but no response received
+        
         setError('No response from the server. Please try again.');
       } else {
-        // Something else caused the error
+        
         setError('An error occurred. Please try again.');
       }
     }
@@ -41,21 +41,21 @@ const Login = () => {
         <div className="w-1/2 p-6">
           <div className="flex items-center justify-center h-full">
             <div>
-              <img src="https://img.freepik.com/premium-vector/adventure-tour-theme-climbing-vacation-with-forest-mountain-views-illustration_2175-3840.jpg?w=740" alt="Illustration" />
+              <img src="https://img.freepik.com/free-vector/young-students-walking-front-university-college-building-flat-vector-illustration-cartoon-people-relaxing-sitting-grass-campus_74855-8747.jpg?t=st=1725604022~exp=1725607622~hmac=1ba44be263ef31b3b1b24bef24b57e91ca2f02ed5fea6c829504bec680e27efa&w=1060" alt="Illustration" />
             </div>
           </div>
         </div>
 
         <div className="w-1/2 p-8">
           <div className="text-center mb-6">
-            <h2 className="text-2xl font-semibold text-gray-700">Trippy</h2>
-            <p className="text-lg text-gray-600 mt-8">Welcome to Trippy</p>
+            <h2 className="text-2xl font-semibold text-gray-700 tracking-wider">LOGIN</h2>
+            <p className="text-lg text-gray-600 mt-8">Welcome to Tezpur University</p>
           </div>
 
           <form onSubmit={handleLogin}>
             <div className="mb-4">
               <label className="block text-sm font-medium mb-1" htmlFor="username">
-                Username
+                Student ID
               </label>
               <input
                 className="w-full px-3 py-2 border rounded-lg"
@@ -91,11 +91,11 @@ const Login = () => {
 
             <div className="mb-4">
               <button type="submit" className="w-full bg-gray-800 text-white py-2 rounded-lg">
-                Sign in
+                Login
               </button>
             </div>
 
-            <div className="flex items-center justify-center">
+            {/* <div className="flex items-center justify-center">
               <button className="flex items-center justify-center w-full py-2 text-gray-700 border rounded-lg">
                 <FaGoogle className="w-6 h-4 mr-2" />
                 Sign in with Google
@@ -104,7 +104,7 @@ const Login = () => {
 
             <div className="mt-4 text-center">
               <Link to="/signup" className="text-sm text-gray-600 hover:underline">New to Trippy? Create Account</Link>
-            </div>
+            </div> */}
           </form>
         </div>
       </div>

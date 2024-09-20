@@ -26,9 +26,9 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div id="default-carousel" className="relative w-full" data-carousel="slide">
+    <div id="default-carousel" className="w-full mt-[64px]" data-carousel="slide">
       {/* Carousel wrapper */}
-      <div className="relative h-56 overflow-hidden top-24 md:h-[40rem]">
+      <div className="relative h-60 overflow-hidden md:h-[41.5rem]">
         {images.map((image, index) => (
             <div
                 key={index}
@@ -37,10 +37,9 @@ const Carousel = () => {
                 }`}
                 data-carousel-item
             >
-                <div className="relative w-full h-full flex items-center justify-center bg-gradient-to-t from-gray-600 to-gray-600">
+                <div className="w-full h-full flex items-center justify-center bg-gradient-to-t from-gray-600 to-gray-600">
                 <img src={image} className="w-full h-full object-cover mix-blend-overlay " alt={`Slide ${index + 1}`} />
                 <div className="absolute inset-0 flex items-center justify-center text-white text-3xl font-bold tracking-wide">
-                    {/* Your centered text */}
                     WELCOME TO OUR UNIVERSITY
                 </div>
                 </div>
@@ -49,7 +48,7 @@ const Carousel = () => {
   </div>
 
       {/* Slider indicators */}
-      <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+      {/* <div className="absolute z-15 flex -translate-x-1/2 bottom-10 left-1/2 space-x-3 rtl:space-x-reverse">
         {images.map((_, index) => (
           <button
             key={index}
@@ -62,12 +61,12 @@ const Carousel = () => {
             onClick={() => setCurrentIndex(index)}
           ></button>
         ))}
-      </div>
+      </div> */}
 
       {/* Slider controls */}
       <button
         type="button"
-        className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-2 cursor-pointer group focus:outline-none"
         onClick={prevSlide}
       >
         <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
